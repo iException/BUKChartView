@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BUKChartView_Example' do
+  pod 'BUKChartView', :path => '../'
+
+  target 'BUKChartView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
