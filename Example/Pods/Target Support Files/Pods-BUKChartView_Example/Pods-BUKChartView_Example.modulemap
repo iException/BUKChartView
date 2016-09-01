@@ -1,0 +1,6 @@
+framework module Pods_BUKChartView_Example {
+  umbrella header "Pods-BUKChartView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

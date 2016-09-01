@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A304a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,9 +16,49 @@
                         <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8A-zd-4x1">
+                                <state key="normal" title="reset"/>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="whP-gf-Uak" eventType="touchUpInside" id="rJ3-0i-iMp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ii2-5s-h3e">
+                                <state key="normal" title="show!"/>
+                                <connections>
+                                    <action selector="animateButtonPressed:" destination="whP-gf-Uak" eventType="touchUpInside" id="B5v-5W-w72"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1np-7z-8hN">
+                                <state key="normal" title="resize"/>
+                                <connections>
+                                    <action selector="resizeButtonPressed:" destination="whP-gf-Uak" eventType="touchUpInside" id="PTT-a2-EOx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyL-pd-fhi">
+                                <state key="normal" title="stroke"/>
+                                <connections>
+                                    <action selector="changeStrokeButtonPressed:" destination="whP-gf-Uak" eventType="touchUpInside" id="whS-Mu-1DA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="J8A-zd-4x1" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" id="7R6-S5-Rex"/>
+                            <constraint firstItem="Ii2-5s-h3e" firstAttribute="width" secondItem="J8A-zd-4x1" secondAttribute="width" id="BOh-C0-KcW"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="J8A-zd-4x1" secondAttribute="bottom" constant="8" id="Gqs-K8-2Sj"/>
+                            <constraint firstItem="jyL-pd-fhi" firstAttribute="width" secondItem="Ii2-5s-h3e" secondAttribute="width" id="H23-SI-7u0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ii2-5s-h3e" secondAttribute="trailing" id="YEN-qt-PS9"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="Ii2-5s-h3e" secondAttribute="bottom" constant="8" id="aBk-AR-lZM"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="1np-7z-8hN" secondAttribute="bottom" constant="8" id="bif-mg-cRE"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="jyL-pd-fhi" secondAttribute="bottom" constant="8" id="ekE-L6-GWo"/>
+                            <constraint firstItem="1np-7z-8hN" firstAttribute="width" secondItem="Ii2-5s-h3e" secondAttribute="width" id="gE7-a5-QVw"/>
+                            <constraint firstItem="jyL-pd-fhi" firstAttribute="leading" secondItem="1np-7z-8hN" secondAttribute="trailing" id="h4o-bH-45W"/>
+                            <constraint firstItem="1np-7z-8hN" firstAttribute="leading" secondItem="J8A-zd-4x1" secondAttribute="trailing" id="mAi-Dd-XWs"/>
+                            <constraint firstItem="Ii2-5s-h3e" firstAttribute="leading" secondItem="jyL-pd-fhi" secondAttribute="trailing" id="mUy-oD-H3e"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>

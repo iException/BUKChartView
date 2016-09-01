@@ -1,0 +1,16 @@
+PODS:
+  - BUKChartView (0.1.0)
+
+DEPENDENCIES:
+  - BUKChartView (from `../`)
+
+EXTERNAL SOURCES:
+  BUKChartView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BUKChartView: 4bec508c23fce2bfc85b8377375ee52e7a4d5894
+
+PODFILE CHECKSUM: 543bc4ef217a855979d7d5a870e8f040fed1e29a
+
+COCOAPODS: 1.0.1
