@@ -67,7 +67,7 @@ static NSString *const kClearAnimationLayerKey = @"animationLayer";
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (object == self && ([keyPath isEqualToString:NSStringFromSelector(@selector(frame))] || [keyPath isEqualToString:NSStringFromSelector(@selector(bounds))])) {
-        [self reloadChart];
+        [self reloadAnimated:NO];
     }
 }
 
@@ -90,6 +90,13 @@ static NSString *const kClearAnimationLayerKey = @"animationLayer";
         [self.values addObject:value];
         sum += value.percentage;
     }
+}
+
+- (void)reloadAnimated:(BOOL)animated
+{
+    NSArray *values = [self.values copy];
+    [self clearAnimated:NO];
+    [self setValues:values animated:animated];
 }
 
 - (void)clearAnimated:(BOOL)animated
@@ -158,18 +165,11 @@ static NSString *const kClearAnimationLayerKey = @"animationLayer";
     return percentage * M_PI * 2.0 / kFullPercantage - M_PI_2;
 }
 
-- (void)reloadChart
-{
-    NSArray *values = [self.values copy];
-    [self clearAnimated:NO];
-    [self setValues:values animated:NO];
-}
-
 #pragma mark - setters
 - (void)setStrokeWidth:(CGFloat)strokeWidth
 {
     _strokeWidth = strokeWidth;
-    [self reloadChart];
+    [self reloadAnimated:NO];
 }
 
 #pragma mark - getter

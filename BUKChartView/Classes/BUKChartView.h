@@ -28,6 +28,8 @@
  */
 - (void)setValues:(NSArray<BUKChartItem *> *)values animated:(BOOL)animated;
 
+- (void)reloadAnimated:(BOOL)animated;
+
 - (void)clearAnimated:(BOOL)animated;
 
 @end

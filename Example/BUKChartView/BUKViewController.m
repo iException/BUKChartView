@@ -23,7 +23,7 @@
 }
 
 - (IBAction)resetButtonPressed:(id)sender {
-    [self.chartView clearAnimated:YES];
+    [self.chartView reloadAnimated:YES];
 }
 
 - (IBAction)animateButtonPressed:(id)sender {
