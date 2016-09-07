@@ -7,6 +7,7 @@
 //
 
 #import "BUKChartView.h"
+@import QuartzCore;
 
 static const CGFloat kFullPercantage = 100.0f;
 static const CGFloat kDefaultStrokeWidth = 6.0f;
