@@ -21,7 +21,11 @@ static NSString *const kClearAnimationLayerKey = @"animationLayer";
 
 @end
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 100000
 @interface BUKChartView () <CAAnimationDelegate>
+#else
+@interface BUKChartView ()
+#endif
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *detailLabel;
